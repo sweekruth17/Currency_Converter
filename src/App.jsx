@@ -22,9 +22,9 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat">
+      <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg-[#222831] ">
         <div className="w-full">
-          <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+          <div className="w-full max-w-md mx-auto border-1 rounded-lg p-5 backdrop-blur-sm  bg-[#76ABAE]">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -46,11 +46,11 @@ function App() {
                   selectCurrrency={from}
                 />
               </div>
-              <div className="relative w-full h-0.5">
+              <div className="relative w-full h-0.5 ">
                 <button
                   type="button"
                   onClick={swap}
-                  className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                  className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-[1px] border-black text-white rounded-md bg-[#222831] px-3 py-1 "
                 >
                   swap
                 </button>
@@ -70,8 +70,9 @@ function App() {
                 type="submit"
                 onClick={() => {
                   setConverted(amount * currencyInfo[to]);
+                  console.log(convert);
                 }}
-                className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+                className="w-full bg-[#222831] text-white px-4 py-3 rounded-lg"
               >
                 Convert {from} to {to}
               </button>
